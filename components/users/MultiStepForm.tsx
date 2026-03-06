@@ -98,25 +98,31 @@ export default function MultiStepForm({ editUser }: Props) {
 
   return (
 
-    <div className="max-w-3xl mx-auto bg-white shadow-xl rounded-xl p-10 mt-10">
+    <div className="max-w-3xl mx-auto bg-white shadow-2xl rounded-2xl p-12 mt-12 mb-12 px-6">
 
       {/* Title */}
 
-      <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">
+      <h2 className="text-4xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 mb-2">
         {editUser ? "Edit User" : "Create User"}
       </h2>
+      <p className="text-center text-gray-500 text-sm mb-8 font-medium">
+        {step === 1 && "Step 1 of 3 - Basic Information"}
+        {step === 2 && "Step 2 of 3 - Professional Details"}
+        {step === 3 && "Step 3 of 3 - Review & Submit"}
+      </p>
 
       {/* Step Progress Bar */}
 
-      <div className="flex mb-10">
+      <div className="flex gap-3 mb-12">
 
         {[1,2,3].map(i => (
-          <div
-            key={i}
-            className={`flex-1 h-3 mx-2 rounded-full ${
-              step >= i ? "bg-blue-600" : "bg-gray-300"
-            }`}
-          />
+          <div key={i} className="flex-1">
+            <div
+              className={`h-2 rounded-full transition-all duration-300 ${
+                step >= i ? "bg-gradient-to-r from-blue-500 to-indigo-600 shadow-lg" : "bg-gray-300"
+              }`}
+            />
+          </div>
         ))}
 
       </div>
@@ -126,7 +132,7 @@ export default function MultiStepForm({ editUser }: Props) {
 
       <form
         onSubmit={handleSubmit(submit)}
-        className="space-y-8"
+        className="space-y-8 px-4"
       >
 
         {step === 1 && (
@@ -143,15 +149,15 @@ export default function MultiStepForm({ editUser }: Props) {
 
         {/* Buttons */}
 
-        <div className="flex justify-between pt-6">
+        <div className="flex flex-col sm:flex-row justify-between pt-8 border-t-2 border-gray-100 gap-4">
 
           {step > 1 && (
             <button
               type="button"
               onClick={prevStep}
-              className="px-6 py-3 bg-gray-500 hover:bg-gray-600 text-white rounded-lg text-lg"
+              className="flex-1 px-6 py-4 bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold rounded-xl text-lg transition-all duration-200 hover:shadow-lg hover:scale-105"
             >
-              Back
+              ← Back
             </button>
           )}
 
@@ -159,18 +165,18 @@ export default function MultiStepForm({ editUser }: Props) {
             <button
               type="button"
               onClick={nextStep}
-              className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-lg"
+              className="flex-1 px-6 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold rounded-xl text-lg transition-all duration-200 hover:shadow-lg hover:scale-105"
             >
-              Next
+              Next →
             </button>
           )}
 
           {step === 3 && (
             <button
               type="submit"
-              className="px-6 py-3 bg-green-600 hover:bg-green-700 text-white rounded-lg text-lg"
+              className="flex-1 px-6 py-4 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-bold rounded-xl text-lg transition-all duration-200 hover:shadow-lg hover:scale-105"
             >
-              Submit
+              ✓ Submit
             </button>
           )}
 

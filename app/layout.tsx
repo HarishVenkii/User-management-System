@@ -1,5 +1,6 @@
 "use client"
 
+import "./globals.css"
 import { Provider } from "react-redux"
 import { store } from "@/store/store"
 import { ReactNode } from "react"
@@ -9,7 +10,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 
   return (
     <html>
-      <body className="bg-gray-100">
+      <body>
 
         <Provider store={store}>
 
