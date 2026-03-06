@@ -12,9 +12,9 @@ import { v4 as uuid } from "uuid"
 import { useRouter } from "next/navigation"
 import toast from "react-hot-toast"
 
-import Step1 from "../../Step1"
-import Step2 from "../../Step2"
-import Step3 from "../../Step3"
+import Step1 from "./Step1"
+import Step2 from "./Step2"
+import Step3 from "./Step3"
 
 type Props = {
   editUser?: User
