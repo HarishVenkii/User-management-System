@@ -7,7 +7,7 @@ export default function UsersPage(){
 
  return(
 
-  <div className="max-w-6xl mx-auto px-6 py-10">
+  <div className="max-w-6xl mx-auto px-6 py-12 bg-white/60 backdrop-blur-sm rounded-xl shadow-lg">
 
    <div className="flex justify-between items-center mb-8">
 
@@ -16,7 +16,7 @@ export default function UsersPage(){
     </h1>
 
     <Link href="/users/create">
-      <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg text-lg shadow">
+      <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg text-lg shadow mr-4">
         + Create User
       </button>
     </Link>
