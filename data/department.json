@@ -1,0 +1,6 @@
+[
+  { "id": 1, "department": "Engineering" },
+  { "id": 2, "department": "HR" },
+  { "id": 3, "department": "Operations" },
+  { "id": 4, "department": "Design" }
+]

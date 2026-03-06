@@ -1,0 +1,18 @@
+[
+  { "id": 1, "role": "Platform Engineer", "department": "Engineering" },
+  { "id": 2, "role": "Quality Champion", "department": "Engineering" },
+  { "id": 3, "role": "Tech Coordinator", "department": "Engineering" },
+  { "id": 4, "role": "Solution Analyst", "department": "Engineering" },
+  { "id": 5, "role": "People Partner", "department": "HR" },
+  { "id": 6, "role": "Talent Navigator", "department": "HR" },
+  { "id": 7, "role": "Workplace Specialist", "department": "HR" },
+  { "id": 8, "role": "Culture Manager", "department": "HR" },
+  { "id": 9, "role": "Process Steward", "department": "Operations" },
+  { "id": 10, "role": "Delivery Controller", "department": "Operations" },
+  { "id": 11, "role": "Flow Manager", "department": "Operations" },
+  { "id": 12, "role": "Logistics Coordinator", "department": "Operations" },
+  { "id": 13, "role": "Visual Craftsman", "department": "Design" },
+  { "id": 14, "role": "Experience Builder", "department": "Design" },
+  { "id": 15, "role": "Creative Strategist", "department": "Design" },
+  { "id": 16, "role": "Brand Storyteller", "department": "Design" }
+]
