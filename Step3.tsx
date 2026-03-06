@@ -11,7 +11,7 @@ export default function Step3({ data }: { data: UserFormData }) {
   ]
 
   return (
-    <div className="space-y-8 px-6 pl-10">
+    <div className="space-y-8 px-6 pl-16">
       <p className="text-center text-gray-700 mb-8 text-lg font-medium tracking-wide">
         Please review your information before submitting
       </p>
